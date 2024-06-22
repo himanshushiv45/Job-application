@@ -1,0 +1,105 @@
+/* Univarsal Selector */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body styling */
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(237, 230, 231);
+  color: #000;
+  display: grid;
+  place-items: center;
+}
+
+.container-fluid {
+  width: 600px;
+  min-height: 500px;
+  padding: 22px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 24px;
+}
+
+/* .form-control {
+  width: 245px;
+} */
+
+.inp {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+#textarea,
+#CV {
+  border: 1px solid gray;
+}
+#textarea {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  grid-column: 1 / span 3;
+}
+
+.btn-container {
+  display: grid;
+}
+#btn {
+  width: 75px;
+  height: 30px;
+  align-self: center; /* imp*/
+  justify-self: end; /* imp*/
+
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgb(125, 182, 188);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* 
+  animation-name: changeColor;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function : linear;
+  */
+  animation: changeColor 1s infinite alternate;
+
+/*
+  animation-timing-function:ease /linear / ease-in /ease-out /ease-in-out /cubic-bezier() 
+  animation-timing-function:cubic-bezier(0.6, 0.3, 0.8 , 1.0) ;
+*/
+  
+/* animation: changeColor 1s cubic-bezier(0.6, 0.3, 0.8, 1.0) 3s infinite alternate; */
+}
+
+
+@keyframes changeColor {
+  from {
+    background-color: rgb(46, 33, 160);
+    color: #fff;
+  }
+  to {
+    background-color: rgb(61, 175, 29);
+    color: #fff;
+  
+  }
+}
